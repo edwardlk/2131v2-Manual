@@ -1,0 +1,118 @@
+\chapter{Observing Brownian Motion at a Microscopic Scale}
+\thispagestyle{fancy}
+\fancyhead[RE,LO]{Experiment \thechapter}
+%
+\section{How can information about forces be derived from a video? Introduction to video capture \& analysis of directed motion and resistive forces.}
+So far in the laboratories, we have been exploring motion of objects traveling in one particular direction.
+We were able to connect this motion to forces because, in the cases we analyzed, the sum of the forces applied to the objects did not change significantly from frame to frame.
+This allowed us to apply Newton’s laws and connect forces and observed motion.
+The objects we studied underwent what we call directed motion.
+\par
+In contrast, for small objects inside a fluid, the pushes and pulls from the surrounding fluid change very rapidly, and thus the sum of the applied forces is changing magnitude and direction much faster than the fastest imaging frame rate (i.e., faster than our cameras can capture).
+On average, when the object is pushed to the right in one frame it will be pushed to the left in another frame.
+So, when looking at such small objects with our camera we no longer see directed motion, we see random motion.
+Such random motion is experienced by all microscopic objects and is an important attribute for living systems: cells—and the molecules, proteins, DNA and lipids within them—are always in seemingly chaotic motion, so it is essential to understand and characterize this volatile behavior if we hope to make sense of the biological world!!
+\par
+For the remainder of the semester, you will have the chance to explore many aspects of random motion.
+During this three-week lab you will characterize some essential features of random motion and explore the dependence of random motion on particular experimental parameters.
+Following this lab, you will investigate motion that is random and directed at the same time (Lab 4) and then consider the analysis of intracellular motion in a living system, including the connections of this motion to work and energy (Lab 5).
+\par 
+Your overall task for the next three weeks is to characterize the random motion of beads suspended in fluid and determine how the variation of experimental parameters (such as bead mass and size and the fluid viscosity) impacts the movement of the beads and their resulting diffusion.
+You will do this in multiple stages.
+\begin{itemize}
+\item Collect three videos (see chart)
+\item Analyze the first video to characterize the behavior of the random motion
+\item Analyze all the videos to determine how the variation of parameters affects diffusion
+\item Write a lab report to synthesize the data gathered by you and the class and to
+summarize your findings regarding random motion and diffusion.
+\end{itemize}
+\par 
+The broad structure of this experiment is provided to you so that the smaller investigations piece together to give a unified picture of random motion and diffusion — but MANY decisions still need to be made by you in order for you to gather and interpret the data.
+You should be careful and thoughtful as you create and record your experimental protocol!
+Since random motion is most easily measured for microscopic systems, we will be exploring it by studying the motion of microscopic beads in fluid under a microscope.
+\par
+Since the motion looks different for each bead, if we want to make statements about the group it will be crucial to measurethe motion of many beads (say 15-20).
+It will be useful for you to measure averages over all beads, but also to create histograms to see the variability from bead to bead (just like you might be curious to know both the average grade and histogram of grades in an exam).
+When working with histograms, it will be necessary to track EVEN MORE beads (say 40-50), so that there are sufficient representatives in each 'bin' of the histogram.
+\begin{enumerate}
+\item To be sure that you know how to use the microscope, and to get a sense for scale, start by taking a look at yeast under the microscope. The yeast cells are about 4 microns in diameter, so they are of a similar size to the beads we will be investigating. Qualitatively describe the motion of yeast cells for your report.
+\item Gather your three videos (see the chart). Here are some helpful hints:
+\begin{itemize}
+\item As you prepare each slide, remember to shake the vial of solution before you extract a sample with the pipette. Your video should be collected fairly quickly after the sample is deposited on the slide. If it takes too much time (e.g., more than 10 minutes), you may want to make another preparation of the sample.
+\item Use the 40X objective for these bead videos.
+\item Each video should be approximately the same total time (about 5 seconds of video for each solution/sample).
+\item Be sure to note and RECORD the video resolution and frame rate for EACH video as soon as VirtualDub has captured the video. Most of this data cannot be retrieved once you leave VirtualDub/start a new video collection.
+\end{itemize}
+\item Harvest the data out of the video files. You might consider doing this ONLY for the first video during this first week of the lab.1 Since all three videos have captured random motion, we need only look at one video to begin characterizing the behavior of random motion. (Also, you may learn tricks and ideas that can help you analyze the other videos in the coming weeks. Next week, we will teach you automatic tracking!) The method you use to harvest the data is a bit different from what you have done previously with ImageJ. Rather than tracking each object of interest through EVERY frame of the video, we can take very specific frames (reducing the number of clicks you need to make). So, for the beads that you are tracking, you want an initial position (at t=0, the first frame), a final position (at the last frame), and at least 4 other positions (at specific frames equally spaced between the initial and final frame). This will take some careful planning once you have the video in ImageJ and BEFORE you open the Manual Tracking plugin. To compare these beads with each other (histogram-style), you need to be tracking these beads in the all of the SAME frames.
+\item Characterize the random motion of the beads in your first video. Compare and contrast their motion to what you would expect for directed motion.
+\end{enumerate}
+%Equipment
+Familiarize yourself with the Microscope Basics sheet before beginning any experimentation. 
+If you do not know how a particular part of the microscope works, please ask a TA or LA—the equipment is expensive! 
+Please be especially careful handling liquid samples near the microscope objectives. 
+\par 
+The CCD camera attached to the microscope will allow us to capture video of what we observe. 
+Using the same VirtualDub software we utilized in previous weeks, we can capture AVI videos of the motion we are trying to analyze. 
+In VirtualDub, the microscope camera can be found under ‘Device’ and is named ``UCMOS03100KPA.'' 
+\par 
+The adjustment options for the microscope CCD camera are slightly less user friendly than the webcam options. 
+However, they are still found in the same VirtualDub menus. 
+The compression and output size options can still be found under ‘Video’ and ‘Capture Pin.’ 
+Be sure to take note of at which resolution you record your videos; it will be important when determining the distance to pixel ratio. 
+This can be done by taking a picture of the 1mm calibration slide at the same resolution and magnification level as your videos. 
+If calibration slides are not available, pictures can be found on the lab computers. 
+\par 
+Brightness, contrast, and other exposure settings can be found under ‘Video’ and ‘Capture Filter.’ 
+The most important difference from the webcam cameras is that the frame rate cannot be directly set before capturing videos. 
+It is necessary to control the frame rate by controlling the exposure time of the CCD camera. 
+By telling it to expose the CCD to light for 100 ms intervals, for instance, you are telling it to take a picture every 0.1 seconds. 
+This also means that you have to carefully control the amount of light through your sample using the iris and bulb power control. 
+If you are having trouble getting the light settings correct, you can use the Auto Exposure option, but this will often result in very low frame rates.
+%
+\section{What does ‘Random’ motion look like? Describing diffusion and random motion using automatic tracking.}
+Last week you began exploring the random motion of beads in fluids and began the process of characterizing this motion using histograms of different types of displacement at different times. 
+This week you will continue to explore this random motion, finalizing your histograms ($\Delta$x, $\Delta$y, and r) at various times for video 1 (2 micron beads in water). 
+When your histograms are finished and you have answered the questions asked in last week's lab document (repeated below), fully characterizing the nature of random motion, you should begin analyzing videos 2 and 3. 
+In order to do this, it might help to have a little more information. 
+\par 
+You will discover, as you build your total RMS displacement histograms, that the average displacement magnitude, i.e.\ the average distance traveled by the beads (let’s call it $\left< r \right>$), deviates from zero: Every bead changes its position by some amount! 
+As you remember, the distance traveled can be calculated as $r = \sqrt{\Delta x^{2}+\Delta y^{2}}$, including only the squares of $\Delta$x and $\Delta$y — which are always positive and so add up to something bigger than zero. 
+This equation indicates that instead of the distance traveled, r, we can measure the square of the distance traveled $r^{2} = \Delta x^{2} + \Delta y^{2}$, also called the Mean Squared Displacement or MSD. 
+This makes the math a bit easier, and r2 increases linearly with the measurement time interval, as you will see today. 
+\par 
+The ``diffusion constant,'' D, is defined to be the proportionality constant between the average displacement squared, $r^{2}$, of the diffusing object and the measurement time interval, $\Delta$t, over which the diffusion occurs. 
+There is also a factor of 4 in there (for geometry reasons—a 4 in 2-dimensions, a 6 in 3-dimensions, a 2 in 1-dimension):
+\begin{equation}
+r^{2} = 4 D \Delta t
+\end{equation} 
+\begin{enumerate}
+\item Characterize the random motion of the beads in your first video: Compare and contrast their motion to what you would expect for directed motion.
+\begin{enumerate}
+\item Are the average total x- and y- displacements of the silica beads, $\left\langle \Delta x \right\rangle $ and $\left\langle \Delta y \right\rangle $, larger if
+you measure total displacements for larger time intervals? If the averages change, how do
+they change? If they don't change, why don't they change?
+\item Are the individual total x- and y- displacements of the silica beads, $\Delta x$ and $\Delta y$, larger if you
+measure total displacements for larger time intervals? [Hint: Make some histograms!] If the individual displacements change, how do they change? If they don't change, why don't they change? How are these individual displacements linked to the average displacements?
+\item How does the root mean square (RMS) total displacement, $r = \sqrt{\Delta x^{2}+\Delta y^{2}}$, change as a function of the measurement time interval? How will histograms of r change as the time interval increases? Does the average total displacement, $\left\langle  r \right\rangle $ change? (Would it matter if we looked at the vector total displacement instead?)
+\end{enumerate}
+\item Examining Diffusion for Video 1: How does the diffusion constant, D, depend on the measurement time interval? Using the information you have already created for your first video, investigate how the square of the average bead displacement, $r^{2}$, changes for different measurement time intervals, $\Delta t$. What is the diffusion constant for your video 1?
+\item Harvesting Data for Videos 2 and 3: Now that you have fully analyzed video 1, you still have two videos to consider. These videos have been carefully chosen so that the class, as a whole, can make statements about how varying specific parameters affects the diffusion constant. You will not need to make histograms with the data that you collect, so you can look at fewer beads, but you do still need to keep track of and coordinate the frames from which you collect your data. Choose at least five suitable time intervals in the video (at least six frames) so beads move visibly, but not so far apart that it gets hard to distinguish nearby beads (examine at least 15 beads). Rather than tracking the beads manually, you may find Automatic Tracking helpful (see the technical skills document). Automatic tracking will collect the data for every frame — and you are welcome to use data from every frame—but you may also use only selected rows of the data produced by the automatic tracker.
+\item Analyzing Videos 2 and 3: Analyzing this data will allow you to combine your results with other groups' work and make claims about how varying the investigated parameter affects the diffusion constant. As with video 1, you will need to create the MSD, $r^{2}$. Make a back-up of your data before you begin. Also, make a plan for how to manipulate your data BEFORE you do any calculations in your spreadsheet. (Planning now saves time later!) How does the square of the average bead displacement, $r^{2}$, change for different measurement time intervals, $\Delta t$, in each video? What are the diffusion constants for your videos 2 and 3?
+\end{enumerate}
+%
+\section{What does `random' motion look like? Characterizing random motion and exploring the form of the diffusion constant}
+Last week you fully characterized the random motion of beads in fluid using histograms of different types of displacement at different times and began to determine how changing parameters of the solutions (beads in fluid) can affect the diffusion constant, D. In this final week of the lab, you will finish analyzing videos 2 and 3, combine your results with those from the rest of the class, and determine how varying parameters of the bead solutions will affect the diffusion constant. You will present your work to your classmates and write a lab report.
+\begin{enumerate}
+\item Finish Analyzing Videos 2 and 3: Analyzing this data will allow you to combine your results with other groups' work and make claims about how varying the investigated parameter affects the diffusion constant. Make a back-up of your data before you begin. Also, make a plan for how to manipulate your data BEFORE you do any calculations in your spreadsheet. (Planning now saves time later!) What are the diffusion constants for videos 2 and 3? (Graphs of $r^{2}$ vs. t should have vertical error bars. How can this uncertainty be determined?)
+\item Examine Diffusion: (We did not explore the dependence of the diffusion constant, D, on temperature. Discuss with your group how you might expect D to vary as a function of temperature.) Using the data that all of the lab groups have collected over the course of this lab, you are expected to make an argument for a plausible expression for the diffusion constant, D, as a function of some (or all) of the following parameters: temperature, fluid viscosity, bead size, and bead mass. (An argument should contain a Claim, Data, and a Warrant—i.e., an explanation of how the claim is related to the data.) You should confirm that this mathematical model for D is plausible by performing a dimensional analysis.
+\item Give Presentations: Before finishing your lab reports, you should present your work to your peers for critical evaluation. Being part of a community of scientists means sharing your work (in professional journals, through symposia, and at conference talks and poster sessions) for critical evaluation and revision by the community. To model this important aspect of scientific practice, you will create posters presenting your methods, findings, and conclusions. Highlight the important features of your work, your analysis, and your results. During the presentations, ask other groups about what they have done and do not be afraid to ask challenging questions. Your goal is to understand what they have done and how they can improve their work. When you present your work to them, they should ask the same types of challenging questions of you and your group. This should spark some interesting discussions that you can incorporate into your lab report in the evaluation/critic's section.
+\item Things to consider including in your lab report: As you know, what goes into your lab report should be determined by the ideas necessary to explain and support your work—in designing the experimental protocol, in collecting and analyzing your data, and in forming your conclusions. Here are a few questions you might consider answering:
+\begin{itemize}
+\item What characteristics have you observed for random motion? (How would these characteristics be similar or different for directed motion?)
+\item If the average total displacement in either the x- or the y-direction is zero for all times, why is the RMS displacement NOT zero? How does the RMS displacement change with time?
+\item What is the mathematical model that you have constructed for the diffusion constant, D? How is this justified by your experimental data? Do the dimensions work out? Where should temperature go?
+\item How could we design an experiment to find the exact form for the diffusion constant (i.e., how could we figure out the numerical constants that accompany the scaling of D with bead mass, bead radius, viscosity, and temperature)?
+\item What could you have done better in your own design and analysis?
+\item How are these ideas of random motion and diffusion constants related to (important in) Biology?
+\end{itemize}
+\end{enumerate}

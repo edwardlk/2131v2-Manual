@@ -1,0 +1,60 @@
+% Edited 8/4/16 EK - full import and correction
+\chapter{How to use ImageJ automatic tracking}
+\thispagestyle{fancy}
+\fancyhead[RE,LO]{Technical Document \thechapter}
+The main difference between manual and automatic tracking is the preliminary image processing that is required. 
+It takes longer to prepare each video for analysis, but automatic tracking makes it much easier to quickly track many particles. 
+Essentially, our goal will be to process our image sequence to the point where our particles appear as black spots on a white background.
+\section*{Opening an `.avi' Video File}
+To open a video file in ImageJ, click on the `File' menu, then choose `Import,' then choose `AVI...'. 
+Select the video you wish to import then click `Okay'. 
+In the `AVI Reader' window that opens, select the `Convert to Grayscale' option, and click `Okay'.
+\section*{Processing an `.avi' Video File}
+Now that the video file has been imported, we want to select an appropriate section of it to analyze with automatic tracking. 
+We are going to crop our video so that we only perform automatic analysis on a section with good, clean random motion. 
+(Note: We don’t want to ``doctor'' our results to come out a certain way, we just want to select a good representation of the total video that is easy to analyze.) 
+Some important factors to keep in mind when selecting an area of the video:
+\begin{itemize}
+\item Select an area with an appropriate number of beads.
+\item Avoid areas with large clumps of beads.
+\item Avoid areas with large fluctuations in lighting conditions (such as the center of the video).
+\item Avoid areas with many beads that are stuck to the slide and not displaying random motion.
+\end{itemize}
+Once you have selected an appropriate area, highlight this area with the rectangle selection tool, click on the `Image' menu, and click on `Crop'. 
+This will delete the rest of the video, and leave only the relevant section. 
+If you want, you can use the zoom button to make this selection a bit larger on your screen.
+\par 
+Now that we have an appropriate video, we need to process it to the point of being black beads on a white background, with limited noise. 
+The first step is set the threshold for the video, which basically takes all of the shades of gray in the video and turns it into black or white. 
+To do this, click on the `Image' menu, click on `Adjust', and then select `Threshold'. 
+In the menu that pops up, play with the sliders until the centers of the beads are displayed in red, but there is no red elsewhere in the video. 
+It should look similar to the screenshot. 
+Once you have achieved this, click on the apply button. 
+Apply the threshold to all of the frames of the video, but you don't have to calculate it each time, the first is enough.
+\par 
+This should produce images similar to the one in the screenshot, with black spots on a white background. 
+You may notice that there are some little spots of noise around the beads. 
+To fix this, go to the `Image' menu, click on `Adjust', and then the `Contrast' option. 
+Set the contrast tab all the way to the right. 
+This should further separate the difference between black and white, leaving just the black spots of the beads.
+\section*{Gathering Data with the Automatic Tracking Plugin}
+Once you have processed your video, you can open the Automatic Tracking plugin (added java code already installed on your computer). 
+The Automatic Tracking plugin allows you to collect horizontal (X) and vertical (Y) position coordinates for objects at different times within the video automatically by only describing the sizes of the objects you want to look at. 
+To activate the Automatic Tracking plugin, click on the `Plugins' menu, select `Stacks', and choose `Multitracker'. 
+A new window will appear. 
+For the min size, enter 1 pixel, and for the max size, enter 9999 pixels. 
+Because of the way we processed the image, the only objects in the video should be the beads we are looking at, so these parameters should work. 
+If you would like a clearer idea of which bead is which, and where they move over time, you can select the Show Label/Path options.
+\section*{Exporting the Automatic Tracking Data to Excel}
+When the data collection is finished, go to your data window and examine how many different particles were tracked for the video. 
+The columns of the resulting data table will just be the X and Y positions for each of the particles that the computer identifies. 
+Make sure that you only use data for real beads displaying real random motion. 
+You can check this by identifying the object at each coordinate position in the result table. 
+If the computer recognized noise as a bead, make sure you exclude this from your analysis. 
+If a bead enters or leaves the screen, make sure you exclude this point as well. 
+If a bead is clearly stuck to the slide and not moving at all, you may want to consider excluding that data point. 
+Once you are sure that you have identified the beads in your results table, you can save your results into an excel file (Option 2 is best for this, as there will be MANY columns).
+\begin{itemize}
+\item Option 1: `Edit' $\rightarrow$ `Select All' $\rightarrow$ `Ctrl' + `C' to Copy $\rightarrow$ Paste into an Excel file (you must add the column titles yourself), or
+\item Option 2: `File' $\rightarrow$ `Save As...' $\rightarrow$ Name the file what you will and click `Save'. (It will save in Excel format with column titles.)
+\end{itemize}

@@ -1,0 +1,79 @@
+\documentclass[hidelinks,12pt,letterpaper,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\usepackage{afterpage}
+\usepackage{tocloft}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+
+\renewcommand{\arraystretch}{1.5}
+
+\setlength{\headheight}{110pt}
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother  
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    %\addtocounter{page}{-1}%
+    \newpage}
+
+\author{WSU Physics \& Astronomy}
+\title{2131 Lab Manual}
+
+\geometry{margin=1in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Physics 2131: Physics for Life Sciences}
+\fancyhead[RE,LO]{Lab \thechapter}
+\fancyfoot[LE,RO]{\thepage}
+
+\tocloftpagestyle{fancy}
+
+\begin{document}
+\maketitle
+
+\newpage{\blankpage}
+
+\include{intro}
+
+\newpage{\blankpage}
+
+\fancyhead[RE,LO]{Table of Contents}
+\renewcommand\contentsname{PHY 2131: Physics for Life Sciences}
+\setcounter{tocdepth}{1}
+\tableofcontents{\thispagestyle{fancy}}
+
+\part{Experiments}
+\renewcommand{\chaptername}{Experiment}
+\include{lab01}
+\newpage{\blankpage}
+\include{lab02}
+\include{lab03}
+\include{lab04}
+\include{lab05}
+
+\newpage{\blankpage}
+
+%\appendix
+\part{Technical Documents}
+\renewcommand{\chaptername}{Technical Document}
+\renewcommand\thechapter{\Alph{chapter}}
+\include{video_capture}		%A
+\newpage{\blankpage}
+\include{imagej_intro}		%B
+\include{imagej_autotrack}	%C
+\newpage{\blankpage}
+\include{error_prop}		%D
+\include{excel_analysis}	%D
+\include{excel_hist}		%E
+
+\end{document}
