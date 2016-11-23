@@ -7,28 +7,18 @@ If it is not, go to the start menu and type `virtual' into the Search Programs a
 The software you want is called `VirtualDub' and has an icon that looks like a gray gear-and-screw. 
 Open this.
 \section*{Capturing video with the webcam}
-Select `File $>$ Capture AVI' to get the webcam activated. 
-If both a webcam and a microscope are connected to your computer, you may need to select the device. 
-Select `Device,' and `Microsoft LifeCam Studio (TM) (DirectShow)' for the webcam or the `UCMOS03100KPA' option for the microscope.
-If you do not see the output from the camera showing in the window, make sure that `Video $>$ Preview' is checked.
-\par 
-To adjust the color space compression, output size (resolution), or frame rate, select `Video $>$ Capture Pin'. 
-To adjust brightness, contrast in the image, and other exposure settings, select `Video $>$ Capture Filter'. 
-Under the `Camera Control' tab, you may wish to uncheck auto-focus after you experiment is setup, to avoid the camera shifting the focus during a measurement.
-These two methods are very important and significantly different for the microscope, and you will learn more about this later. 
-\par 
-To adjust the length of your video, select ‘Capture $>$ Stop Conditions’. 
-Be aware that ImageJ can process only about 400 frames (due to the limited working memory of the computer, more frames possible with the virtual stack option), so you will need to adjust the play rate and total time of your video to take the minimum length to capture your event and not much else. 
-\par 
-To begin capturing a video, you first need to set a name for the resulting file. 
-To do this, select `File $>$ Set Capture File', and input a file name. 
-You should be saving your files to different folders for different experiments, so as not to confuse them. 
-Create a folder for your group to use in My Documents. 
-Then click `SAVE'. 
-Also make sure to check `Capture $>$ Autoincrement filename after capture' to avoid accidentally overwriting any of your good data.
-\par 
-When you are ready to capture video of motion/your subject, select `Capture $>$ Capture video' or press F5. Once your experiment is complete, press `Esc' to stop recording. 
-Keep in mind, you may need to collect several trial videos before you manage to get good video for analysis in ImageJ.
+\begin{itemize}
+\item The fist window that opens is for editing videos. Select `File $>$ Capture AVI' to open the video capture window.
+\item If both a webcam and a microscope are connected to your computer, you may need to select the device. 
+Select `Device,' and `Microsoft LifeCam Studio (TM) (DirectShow)' for the webcam or the `Toupcam (DirestShow)' option for the microscope.
+\item If you do not see the output from the camera showing in the window, make sure that `Video $>$ Preview' is checked.
+\item There are a number of settings that you can investigate to change aspects of the video you wish to capture.
+Your lab station will have a guide with more information about the correct settings to use, what settings you may need to adjust, and what settings should not be changed.
+\item Be aware that ImageJ can process only about 400 frames (due to the limited working memory of the computer, more frames possible with the virtual stack option), so you will need to adjust the play rate and total time of your video to take the minimum length to capture your event and not much else. This can be done very easily in the VirtualDub editing window, see the guide in lab for more information.
+\item Check the save location, file name, and auto-increment settings; set these to your group;s data folder so that you don't lose any data and avoid writing over anyone else's data.
+\item When you are ready to capture video of motion/your subject, select `Capture video' or press F6. Once your experiment is complete, click `Stop Capture' or press `Esc' to stop recording. 
+\item Keep in mind, you may need to collect several trial videos before you manage to get good video for analysis in ImageJ.
+\end{itemize}
 \section*{Capturing video with the microscope CCD camera}
 Unfortunately, the user interface for the microscope camera is not quite as friendly as the webcam. 
 In fact the frame rate, which is very important for the measurements you will be doing, is difficult to set exactly. 
