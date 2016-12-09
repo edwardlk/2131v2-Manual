@@ -1,14 +1,24 @@
 % Edited 8/4/16 EK - full import and correction
-\chapter{How to use ImageJ automatic tracking}
+\chapter{How to use ImageJ}
 \thispagestyle{fancy}
 \fancyhead[RE,LO]{Technical Document \thechapter}
-The main difference between manual and automatic tracking is the preliminary image processing that is required. 
-It takes longer to prepare each video for analysis, but automatic tracking makes it much easier to quickly track many particles. 
-Essentially, our goal will be to process our image sequence to the point where our particles appear as black spots on a white background.
+
+\section{Basic ImageJ tasks}
+
+\section*{Determining distance-to-pixel ratio in ImageJ}
+Once you have imported a file into ImageJ, you will need to determine the distance-to-pixel ratio for your video (this should be done separately for each video analyzed). 
+\begin{itemize}
+\item You will need to use the `line' tool (*Straight* tool, 5th from left end of icons in toolbar) in ImageJ.
+\item Click on the `line tool' icon of the ImageJ menu toolbar (it looks like a sloped line or a slanted fraction bar (/), and the bottom right corner has a downward-pointing black triangle). 
+\item Using this tool, click on one end of a `known length’ object hold down the mouse button, and drag the line across the `known length’ object to the other side. 
+\item Click `Analyze $>$ Set Scale...'. Edit `Known Distance' and `Unit of length'. Now that the scale is set, the rest of the measurements that you take will be reported in the entered units.
+\end{itemize}
+
 \section*{Opening an `.avi' Video File}
 To open a video file in ImageJ, click on the `File' menu, then choose `Import,' then choose `AVI...'. 
 Select the video you wish to import then click `Okay'. 
 In the `AVI Reader' window that opens, select the `Convert to Grayscale' option, and click `Okay'.
+
 \section*{Processing an `.avi' Video File}
 Now that the video file has been imported, we want to select an appropriate section of it to analyze with automatic tracking. 
 We are going to crop our video so that we only perform automatic analysis on a section with good, clean random motion. 
@@ -37,6 +47,12 @@ You may notice that there are some little spots of noise around the beads.
 To fix this, go to the `Image' menu, click on `Adjust', and then the `Contrast' option. 
 Set the contrast tab all the way to the right. 
 This should further separate the difference between black and white, leaving just the black spots of the beads.
+
+\section{How to use ImageJ automatic tracking}
+The main difference between manual and automatic tracking is the preliminary image processing that is required. 
+It takes longer to prepare each video for analysis, but automatic tracking makes it much easier to quickly track many particles. 
+Essentially, our goal will be to process our image sequence to the point where our particles appear as black spots on a white background.
+
 \section*{Gathering Data with the Automatic Tracking Plugin}
 Once you have processed your video, you can open the Automatic Tracking plugin (added java code already installed on your computer). 
 The Automatic Tracking plugin allows you to collect horizontal (X) and vertical (Y) position coordinates for objects at different times within the video automatically by only describing the sizes of the objects you want to look at. 
@@ -45,6 +61,7 @@ A new window will appear.
 For the min size, enter 1 pixel, and for the max size, enter 9999 pixels. 
 Because of the way we processed the image, the only objects in the video should be the beads we are looking at, so these parameters should work. 
 If you would like a clearer idea of which bead is which, and where they move over time, you can select the Show Label/Path options.
+
 \section*{Exporting the Automatic Tracking Data to Excel}
 When the data collection is finished, go to your data window and examine how many different particles were tracked for the video. 
 The columns of the resulting data table will just be the X and Y positions for each of the particles that the computer identifies. 
