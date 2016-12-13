@@ -1,4 +1,4 @@
-\chapter{Error Propagation}
+\chapter{Measurement Error}
 \thispagestyle{fancy}
 \fancyhead[RE,LO]{Technical Document \thechapter}
 %
@@ -14,6 +14,27 @@ They always shift the result in one specific direction and need special care to 
 Errors that arise from many small hard to control uncertainties (e.g. how well two fluids are mixed, how stable the temperature of the apparatus is, or whether the measurement is affected by building vibrations) are well studied mathematically and are referred to as random error, and these errors make the result bigger OR smaller in a RANDOM fashion. 
 One way to get a handle on this random error is to repeat the experiment a number of times, preparing it as similarly as you can, and see how much variation there is. 
 The statistical tools of mean (average) and standard deviation allow you to estimate both the average result and the error bar arising from random error.
+
+\section*{Mean, Standard Deviation, \& Standard Error}
+Given a number of measurements of the same event, the best estimate of the measurement is the mean of the values found,
+\[ x_{best} = \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_{i} \]
+where $n$ is the number of measurements.
+
+A useful way of characterizing the reliability of the measurements is to calculate the standard deviation,
+\[ \sigma = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n}(x_{i}-\bar{x})^{2}} \]
+The	significance of the standard deviation is that approximately 68\% of the measurements should lie within a range of $\sigma$ of the mean value.
+With this definition, we can now write down the uncertainty of each individual measurement as $x_{i} \pm \sigma$.
+
+The	mean of several measurements provides a better estimate of a quantity than a single measurement.
+This stems from the fact that the uncertainty in the mean is smaller than the uncertainty of each individual measurement.
+One can show that the uncertainty of the mean, also known as the standard error, is given by:
+\[ \sigma_{m} = \frac{\sigma}{\sqrt{n}} \]
+where $n$, again, is the number of measurements.
+
+Then, the manner in which we will write the result of a set of measurements is that the best estimate and its uncertainty may be written
+\[ x_{best} = \bar{x} \pm \sigma_{m} \]
+The standard deviation of the mean slowly decreases with increasing number of  measurements; however, to improve the precision by a factor of 10, the number of measurements has to be increased by a factor of 100, which is hard work to say the least.
+Thus, in practice, better precision is usually obtained by improving the experimental technique rather than just relying on an increased numbers of measurements.
 
 \section*{Propagation of Error}
 Often the measurement that we make is not the final answer we want. 
@@ -59,6 +80,11 @@ If you know the uncertainty in $\Delta$x, $\delta$($\Delta$x), and the uncertain
 %
 \[ \delta \langle v \rangle = \sqrt{(\delta \langle v \rangle_{\Delta x})^{2} 
    + (\delta \langle v \rangle_{\Delta t})^{2}} = \sqrt{\left(\frac{1}{\Delta t} \delta (\Delta x)\right)^{2} + \left(\frac{-\Delta x}{\Delta t^{2}} \delta (\Delta t)\right)^{2}} \]
+
+\paragraph{For example,} let say that want calculate the average velocity of a air-track cart. Your track is 2 m long, and the error you estimate for your meter stick is 5 mm. You used a photogate system to measure the time it took for the cart to traverse the track; you measured a value of 4.0  with an error of 0.3 s. Thus, your average velocity would be 0.5 m/s, and your uncertainty would be:
+
+\[ \delta \langle v \rangle = \sqrt{ \left( \frac{1}{4.0 \, s} (0.005 \, m) \right)^{2} + \left( \frac{-2.0 \, m}{(4.0 \, s)^{2}} (0.3 \, s) \right)^{2}} = 0.038 \, m/s \]
+Thus, you would report the average velocity of your cart as $v = 0.5 \pm 0.038 \, m/s$
 
 \subsection*{Example 2: A Sinusoidal Function}
 Given a sinusoidal function $a = \sin(\omega t) + 2$ and uncertainties in $\omega$, $\delta \omega$, and in t, $\delta$t, the uncertainty in a, $\delta$a can be calculated as follows:
