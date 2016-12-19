@@ -39,20 +39,33 @@
 \tocloftpagestyle{fancy}
 
 \begin{document}
-\maketitle
+
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{wsu_logo}\par\vspace{1cm}
+	{\scshape\LARGE Physics 2131 \par}
+	\vspace{0.5cm}
+	{\scshape\large Physics for the Life Sciences\par}
+	\vfill
+	{\huge\bfseries Lab Manual \par}
+	\vfill
+% Bottom of the page
+	{\large Winter 2017 \par}
+	{\large \today\par}
+\end{titlepage}
 
 \newpage{\blankpage}
 
 \include{intro}
 
-\newpage{\blankpage}
+%\newpage{\blankpage}
 
 \fancyhead[RE,LO]{Table of Contents}
 \renewcommand\contentsname{PHY 2131: Physics for Life Sciences}
 \setcounter{tocdepth}{1}
 \tableofcontents{\thispagestyle{fancy}}
 
-\newpage{\blankpage}
+%\newpage{\blankpage}
 
 \part{Experiments}
 \renewcommand{\chaptername}{Experiment}
