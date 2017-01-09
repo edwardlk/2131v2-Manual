@@ -63,6 +63,13 @@ If, in a formula, you wish to reference a specific column or cell (that will NOT
 
 Another example is shown in figure \ref{fig:exc2}, which is in the last section of this technical document.
 
+\begin{figure}[h]
+\includegraphics[scale=0.5]{excel4.png}
+\centering
+\caption{To add other elements to your chart (e.g. axis titles), choose ``Add Chart Elements'' from the ``Design'' menu.}
+\label{fig:exc4}
+\end{figure}
+
 \section*{Generating Graphs:}
 When creating a graph/plot, Excel will usually plot the first column on the independent/ horizontal axis and the second column on the dependent/vertical axis. 
 You should always check that the correct data has appeared on the correct axis. 
@@ -73,14 +80,14 @@ Once the data is highlighted, click on the `Insert' tab and then the `Scatter' i
 From the sub-types of scatter plot available, choose the one that has data points but no lines. 
 A graph will appear — but you are NOT finished yet!
 \par
-The design of the graph can be adjusted using the `Chart Layout' menu - you will want to be able to label the individual axes with the quantity graphed and its units and you will want to be able to title the graph. 
+The design of the graph can be adjusted using the `Chart Layout' menu (see figure \ref{fig:exc4}) - you will want to be able to label the individual axes with the quantity graphed and its units and you will want to be able to title the graph. 
 When the graph has been titled (for the `vs.' format, it is always `Dependent' vs. `Independent') and the axes have been properly labeled, you can choose to keep or delete the Legend (not needed if only one data set is plotted, absolutely necessary for multiple data sets). 
 The location of the chart can be changed by: left-clicking on the chart (the upper right corner works well), then right clicking and choosing `Move Chart' from the menu. 
 It is often best to make the chart a `New Sheet' (so that it doesn't block your view of the data) - give it an appropriate title and click `Okay.' 
 You chart will become its own sheet - and your data will disappear! 
 But the data is not gone - to find it, use the tabs on the bottom of the Excel window (`Sheet 1' is usually the data; now might be a good time to rename it `Data': right click, select `Rename' and name it).
 \par 
-Before you finish, check that the correct data has been plotted on the correct axis and that the axis labels match the quantities plotted. 
+Before you finish, check that the correct data has been plotted on the correct axis and that the axis labels match the quantities plotted (see figures \ref{fig:exc5} and \ref{fig:exc6}). 
 If the original columns were in reverse order, this can be adjusted by left-clicking on a data point (to select the data), and then right-clicking and choosing `Select Data.' 
 Click on the Legend Entry you wish to adjust, and then click `Edit.' 
 Highlight the appropriate Series X and Series Y data and then click `Okay.'
@@ -119,9 +126,10 @@ Do you have uncertainty?
 Do you have uncertainty in both quantities (horizontal and vertical)? 
 Is the uncertainty the same for all data points, or does it change with the value of the quantity plotted? 
 Wherever you have uncertainty, you must have error bars! 
-Once you have determined the amount of uncertainty, you can add error bars by clicking on the `Layout' tab (inside the `Chart Tools' tab) and clicking on the `Error Bars' icon. 
-To get both horizontal and vertical error bars, a good choice is the `Error Bars with Standard Error,' and then click on the vertical and horizontal bars (individually) and right click to `Format Error Bars.' 
-Apply the error bars according to the decisions that you have made about your uncertainty. 
+Once you have determined the amount of uncertainty, you can add error bars by clicking `Add Chart Elements' inside the `Chart Tools' tab. 
+Select `More Error Bars Options', then select the data set that you are adding error bars too.
+This should open up the format window, which will allow you to select the length of the error bars (under `Error Amount').
+Apply the error bars according to the decisions that you have made about your uncertainty; a good choice is often `Standard Error', but you may sometimes wish to use errors that you calcuated by selecting `Custom' and then selecting the appropriate columns with your errors. 
 To remove either vertical or horizontal error bars, left-click on the bars, then right-click and choose `Delete'.
 
 \section*{Other cool tools:}
@@ -149,8 +157,6 @@ To perform any of these functions on disconnected sets of cells (e.g., cells in 
 Excel has many other functions available, including trigonometric and logarithmic functions. 
 Investigate what is available by clicking on the `Formulas' tab and looking through the `Function Library,' especially the `Math \& Trig' and `More Functions' menus.
 
-\newpage
-
 \section*{Other Examples}
 
 \begin{figure}[h]
@@ -158,4 +164,18 @@ Investigate what is available by clicking on the `Formulas' tab and looking thro
 \centering
 \caption{Another example of using the \$ symbol to use a constant in a calculation. By typing the formula \texttt{=B\$2*\$A5} into cell B5, you can allow the constant to change along a specified axis, while continuing to multiply by the numbers in the `Extension' column.}
 \label{fig:exc2}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[scale=0.5]{excel5.png}
+\centering
+\caption{To edit or add sets of data to a graph, choose ``Select Data'' from the ``Design'' menu.}
+\label{fig:exc5}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[scale=0.5]{excel6.png}
+\centering
+\caption{After selecting ``Edit'' in the ``Select Data Source'' menu, you can check if the values are being graphed on the proper axes, and edit the size of the data series if necessary.}
+\label{fig:exc6}
 \end{figure}
