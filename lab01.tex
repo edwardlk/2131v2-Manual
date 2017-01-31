@@ -38,7 +38,7 @@ Remember, your TA is here to help you with equipment and Excel, but the physics 
 \item Use ImageJ to open the file ``\textit{amoeba.png}.''
 %\item \textit{Optional:} Adjust the origin of the graph.
 %Use the ``Point'' tool to find the x and y pixels of the origin, and input those values into the origin box under ``Image $>$ Properties.''
-\item Set the scale of the image using the y-axis [\textit{See Technical Document B}].
+\item Set the scale of the image using the y-axis.
 \item Use the ``Point'' tool to determine the y-position of the amoeba at each point.
 You can measure each position with Ctrl+M and then transfer the list of measurements to Excel by right-clicking the list of measurements.
 \item Using your y-position measurements and the given imaging interval, calculate the velocity and the acceleration of the amoeba at each point. 
@@ -79,15 +79,15 @@ Take notes for the future if you are worried that you will forget.
 \begin{enumerate}
 \item Go to `File $>$ Import $>$ AVI...'.
 \item Select the video that you want to analyze, click OK on the `AVI Reader' window.
-\item Open the Manual Tracking plugin, found in `Plugins $>$ Stacks'.
+\item Open the Manual Tracking plugin, found in `Plugins $>$ PHY2131 Plugins'.
 \item In the `Tracking' window that opens, set your options for manual particle tracking:
 	\begin{enumerate}
-	\item In `Parameters', set the time per frame (i.e. the inverse of the frame rate) in the `Time Interval' box. Set `x/y calibration' to the scale of your image, if known (if not, set it to `1 unit').
-	\item Check `Use centering correction?' if to have Imagej track the darkest or lightest point nearest to the point you select on each frame, by setting the `Centering option' to `Local maximum' for the brightest pixel and `Local minimum' for the darkest pixel.
-	\item If your features are small relative to the size of the pixels and you are using centering correction, you may want to reduce `Search square size for centering'.
+	\item In `Parameters', set the time per frame in the `Time Interval' box. Set `x/y calibration' to the scale of your image. For the videos we are analyzing today, these parameters are listed on the next page.
+	\item An optional step is to check `Use centering correction?' in order to have Imagej track the darkest or lightest point nearest to the point you select on each frame. Set the `Centering option' to `Local maximum' for the brightest pixel and `Local minimum' for the darkest pixel [see the document \textit{Manual Tracking plugin documentation.pdf} for more information].
+	\item If you are using the centering correction and your features are small relative to the size of the pixels, you may want to reduce `Search square size for centering'.
 	\end{enumerate}
 \item Find a particle that you can easily track throughout the entire video.
-\item Select `Add track' in the tracking window to begin tracking your particle.
+\item Select `Add track' in the tracking window to begin tracking your particle. Each time you click on the particle's location, the plugin will record the position and velocity of the particle and then move to the next frame. If your particle leaves the field of view before you reach the end of the video, click `End Track'.
 \item Have each member of the group track 2 particles from each video.
 \item Don't forget to save your measurements.
 \end{enumerate}
