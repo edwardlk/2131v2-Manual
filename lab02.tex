@@ -25,14 +25,22 @@ It is advised that you carry out one investigation from beginning to end (video 
 After today, you will ALL be expected to be experts at these skills so take turns and help each other learn.
 Take notes for the future if you are worried that you will forget.
 
+\subsection*{*Important Note on Video Capturing*}
+Recording high quality videos using the methods detailed below can result in very large video files. Capturing one 30-second video can create a file as large as \emph{1.5 GB}; if we are not careful about the amount of video that is being captured, we can quickly overfill the hard drive and crash the computer. Therefore, it is important that you follow the steps as they are listed below. Setting the stop conditions in step 5 ensures that in case you forget to end the video capture, the program would stop capturing on its own. In step 3, you are asked to use a common file to store the videos that you capture. Occasionally, the TAs will need to delete all the videos in this folder to make room on the hard drive. Therefore, it is important to edit the videos that you capture to save only the frames that contain data you plan on analyzing, and then save these smaller video files to your group folder. Please check with your TA if you are unsure about how to do this.
+
 \subsection{Capturing a .avi Video}
 \begin{enumerate}
-\item The program that we will be using to capture videos for analys is called `Virtualdub', a shortcut to it can be found on the desktop. After double-clicking the shortcut, a video editing-editing window opens. Navigate to `File $>$ Capture AVI...' ot get the program into capture mode.
-\item Click `Device $>$ Microsoft LifeCam Studio(TM) (DirectShow)' to show the output from the camera. If you are not getting an image, ask your TA for help (sometimes shutting off the program, re-plugging the camera back in, and then restarting the program works).
-\item Go to `File $>$ Set capture file...' to choose the save location and file names for the videos you capture. Good file names end with numbers the program can increment, so use something like `Name-lab2-001' as your file name.
+\item The program that we will be using to capture videos for analysis is called `VirtualDub', a shortcut to it can be found on the desktop. After double-clicking the shortcut, a video editing-editing window opens. Navigate to `File $>$ Capture AVI...' to get the program into capture mode.
+\item Click `Device $>$ Microsoft LifeCam Studio(TM) (DirectShow)' to show the output from the camera. If you are not getting an image, ask your TA for help (sometimes shutting off the program, unplugging then re-plugging in the camera, and then restarting the program works).
+\item Go to `File $>$ Set capture file...' , choose the folder `VirtualDub captures', and choose a file names for the videos you capture. Good file names end with numbers the program can increment, so use something like `GroupName-lab2-001' as your file name.
 \item Uncheck `Audio $>$ Enable audio capture'.
-\item Navigate to `Capture $>$ Stop conditions...', and check the box next to `capture time exceeds 30 seconds'. Click Accept.
-\item Check `Capture $>$ Autoincrement filename after capture'.
+\item Navigate to `Capture' and make sure the following settings are correct:
+\begin{itemize}
+	\item `Stop conditions...': check the box next to `capture time exceeds 30 seconds'. Click Accept.
+	\item `Disk I/O...': set `Chunk Size' to 2 MB and `Chunks in buffer' to 20. Click Accept.
+	\item Check `Autoincrement filename after capture'.
+\end{itemize}
+\item Now you are ready to begin capturing your videos. Align all the parts of your experiment and then either click `Capture $>$ Capture video' or press `F6'. To stop a capture, press `Esc'.
 \end{enumerate}
 
 \section{Error propagation and analysis of directed motion \& resistive forces}
