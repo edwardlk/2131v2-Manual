@@ -16,6 +16,14 @@ Such random motion is experienced by all microscopic objects and is an important
 For the remainder of the semester, you will have the chance to explore many aspects of random motion.
 During this three-week lab you will characterize some essential features of random motion and explore the dependence of random motion on particular experimental parameters.
 Following this lab, you will investigate motion that is random and directed at the same time (Lab 4) and then consider the analysis of intracellular motion in a living system, including the connections of this motion to work and energy (Lab 5).
+\par 
+The broad structure of this experiment is provided to you so that the smaller investigations piece together to give a unified picture of random motion and diffusion — but MANY decisions still need to be made by you in order for you to gather and interpret the data.
+You should be careful and thoughtful as you create and record your experimental protocol!
+Since random motion is most easily measured for microscopic systems, we will be exploring it by studying the motion of microscopic beads in fluid under a microscope.
+\par
+Since the motion looks different for each bead, if we want to make statements about the group it will be crucial to measure the motion of many beads (say 15-20).
+It will be useful for you to measure averages over all beads, but also to create histograms to see the variability from bead to bead (just like you might be curious to know both the average grade and histogram of grades in an exam).
+When working with histograms, it will be necessary to track EVEN MORE beads (say 40-50), so that there are sufficient representatives in each 'bin' of the histogram.
 
 \paragraph{For this three week lab:}Your overall task for the next three weeks is to characterize the random motion of beads suspended in fluid and determine how the variation of experimental parameters (such as bead mass and size and the fluid viscosity) impacts the movement of the beads and their resulting diffusion.
 You will do this in multiple stages.
@@ -26,14 +34,30 @@ You will do this in multiple stages.
 \item Write a lab report to synthesize the data gathered by you and the class and to
 summarize your findings regarding random motion and diffusion.
 \end{itemize}
-\par 
-The broad structure of this experiment is provided to you so that the smaller investigations piece together to give a unified picture of random motion and diffusion — but MANY decisions still need to be made by you in order for you to gather and interpret the data.
-You should be careful and thoughtful as you create and record your experimental protocol!
-Since random motion is most easily measured for microscopic systems, we will be exploring it by studying the motion of microscopic beads in fluid under a microscope.
+
+\subsection*{Equipment}
+Familiarize yourself with the Microscope Basics sheet before beginning any experimentation. 
+If you do not know how a particular part of the microscope works, please ask a TA or LA—the equipment is expensive! 
+Please be especially careful handling liquid samples near the microscope objectives. 
 \par
-Since the motion looks different for each bead, if we want to make statements about the group it will be crucial to measure the motion of many beads (say 15-20).
-It will be useful for you to measure averages over all beads, but also to create histograms to see the variability from bead to bead (just like you might be curious to know both the average grade and histogram of grades in an exam).
-When working with histograms, it will be necessary to track EVEN MORE beads (say 40-50), so that there are sufficient representatives in each 'bin' of the histogram.
+The CCD camera attached to the microscope will allow us to capture video of what we observe. 
+Using the same VirtualDub software we utilized in previous weeks, we can capture AVI videos of the motion we are trying to analyze. 
+In VirtualDub, the microscope camera can be found under `Device' and is named ``UCMOS03100KPA''. 
+\par  
+The adjustment options for the microscope CCD camera are slightly less user friendly than the webcam options. 
+However, they are still found in the same VirtualDub menus. 
+The compression and output size options can still be found under `Video' and `Capture Pin'. 
+Be sure to take note of at which resolution you record your videos; it will be important when determining the distance to pixel ratio. 
+This can be done by taking a picture of the 1mm calibration slide at the same resolution and magnification level as your videos. 
+If calibration slides are not available, pictures can be found on the lab computers. 
+\par 
+Brightness, contrast, and other exposure settings can be found under `Video' and `Capture Filter'. 
+The most important difference from the webcam cameras is that the frame rate cannot be directly set before capturing videos. 
+It is necessary to control the frame rate by controlling the exposure time of the CCD camera. 
+By telling it to expose the CCD to light for 100 ms intervals, for instance, you are telling it to take a picture every 0.1 seconds.
+This also means that you have to carefully control the amount of light through your sample using the iris and bulb power control. 
+If you are having trouble getting the light settings correct, you can use the Auto Exposure option, but this will often result in very low frame rates.
+
 \begin{enumerate}
 \item To be sure that you know how to use the microscope, and to get a sense for scale, start by taking a look at the calibration slides. These will allow you to determine the pixel-scale of your image. Next, use the microspheres which have been dried to a glass slide to properly adust the focus and illumination of the microscope.
 \item Gather your first video (see the chart). Here are some helpful hints:
@@ -61,30 +85,7 @@ For videos 2 and 3, you can use only 15-20 beads (which should be sufficient for
 \end{enumerate}
 \end{enumerate}
 
-\subsection*{Equipment}
-Familiarize yourself with the Microscope Basics sheet before beginning any experimentation. 
-If you do not know how a particular part of the microscope works, please ask a TA or LA—the equipment is expensive! 
-Please be especially careful handling liquid samples near the microscope objectives. 
-\par
-The CCD camera attached to the microscope will allow us to capture video of what we observe. 
-Using the same VirtualDub software we utilized in previous weeks, we can capture AVI videos of the motion we are trying to analyze. 
-In VirtualDub, the microscope camera can be found under `Device' and is named ``UCMOS03100KPA''. 
-\par  
-The adjustment options for the microscope CCD camera are slightly less user friendly than the webcam options. 
-However, they are still found in the same VirtualDub menus. 
-The compression and output size options can still be found under `Video' and `Capture Pin'. 
-Be sure to take note of at which resolution you record your videos; it will be important when determining the distance to pixel ratio. 
-This can be done by taking a picture of the 1mm calibration slide at the same resolution and magnification level as your videos. 
-If calibration slides are not available, pictures can be found on the lab computers. 
-\par 
-Brightness, contrast, and other exposure settings can be found under `Video' and `Capture Filter'. 
-The most important difference from the webcam cameras is that the frame rate cannot be directly set before capturing videos. 
-It is necessary to control the frame rate by controlling the exposure time of the CCD camera. 
-By telling it to expose the CCD to light for 100 ms intervals, for instance, you are telling it to take a picture every 0.1 seconds.
-This also means that you have to carefully control the amount of light through your sample using the iris and bulb power control. 
-If you are having trouble getting the light settings correct, you can use the Auto Exposure option, but this will often result in very low frame rates.
-
-\begin{table}[!t]
+\begin{table}[ht]
 \centering
 \caption{Video Summary}
 \label{tab:exp3video}
@@ -135,8 +136,8 @@ measure total displacements for larger time intervals? [Hint: Make some histogra
 Last week you fully characterized the random motion of beads in fluid using histograms of different types of displacement at different times and began to determine how changing parameters of the solutions (beads in fluid) can affect the diffusion constant, D. In this final week of the lab, you will finish analyzing videos 2 and 3, combine your results with those from the rest of the class, and determine how varying parameters of the bead solutions will affect the diffusion constant. You will present your work to your classmates and write a lab report.
 \begin{enumerate}
 \item \textbf{Finish Analyzing Videos 2 and 3:} Analyzing this data will allow you to combine your results with other groups' work and make claims about how varying the investigated parameter affects the diffusion constant. Make a back-up of your data before you begin. Also, make a plan for how to manipulate your data BEFORE you do any calculations in your spreadsheet. (Planning now saves time later!) What are the diffusion constants for videos 2 and 3? (Graphs of $r^{2}$ vs. t should have vertical error bars. How can this uncertainty be determined?)
-\item \textbf{Examine Diffusion:} (We did not explore the dependence of the diffusion constant, D, on temperature. Discuss with your group how you might expect D to vary as a function of temperature.) Using the data that all of the lab groups have collected over the course of this lab, you are expected to make an argument for a plausible expression for the diffusion constant, D, as a function of some (or all) of the following parameters: temperature, fluid viscosity, bead size, and bead mass. (An argument should contain a Claim, Data, and a Warrant—i.e., an explanation of how the claim is related to the data.) You should confirm that this mathematical model for D is plausible by performing a dimensional analysis.
-\item \textbf{Give Presentations:} Before finishing your lab reports, you should present your work to your peers for critical evaluation. Being part of a community of scientists means sharing your work (in professional journals, through symposia, and at conference talks and poster sessions) for critical evaluation and revision by the community. To model this important aspect of scientific practice, you will create posters presenting your methods, findings, and conclusions. Highlight the important features of your work, your analysis, and your results. During the presentations, ask other groups about what they have done and do not be afraid to ask challenging questions. Your goal is to understand what they have done and how they can improve their work. When you present your work to them, they should ask the same types of challenging questions of you and your group. This should spark some interesting discussions that you can incorporate into your lab report in the evaluation/critic's section.
+\item \textbf{Examine Diffusion:} Using the data that all of the lab groups have collected over the course of this lab, you are expected to make an argument for a plausible expression for the diffusion constant, D, as a function of some (or all) of the following parameters: temperature, fluid viscosity, bead size, and bead mass. (An argument should contain a Claim, Data, and a Warrant—i.e., an explanation of how the claim is related to the data.) You should confirm that this mathematical model for D is plausible by performing a dimensional analysis.
+%\item \textbf{Give Presentations:} Before finishing your lab reports, you should present your work to your peers for critical evaluation. Being part of a community of scientists means sharing your work (in professional journals, through symposia, and at conference talks and poster sessions) for critical evaluation and revision by the community. To model this important aspect of scientific practice, you will create posters presenting your methods, findings, and conclusions. Highlight the important features of your work, your analysis, and your results. During the presentations, ask other groups about what they have done and do not be afraid to ask challenging questions. Your goal is to understand what they have done and how they can improve their work. When you present your work to them, they should ask the same types of challenging questions of you and your group. This should spark some interesting discussions that you can incorporate into your lab report in the evaluation/critic's section.
 \item \textbf{Things to consider including in your lab report:} As you know, what goes into your lab report should be determined by the ideas necessary to explain and support your work—in designing the experimental protocol, in collecting and analyzing your data, and in forming your conclusions. Here are a few questions you might consider answering:
 \begin{itemize}
 \item What characteristics have you observed for random motion? (How would these characteristics be similar or different for directed motion?)
