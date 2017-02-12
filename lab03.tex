@@ -28,8 +28,10 @@ When working with histograms, it will be necessary to track EVEN MORE beads (say
 \paragraph{For this three week lab:}Your overall task for the next three weeks is to characterize the random motion of beads suspended in fluid and determine how the variation of experimental parameters (such as bead mass and size and the fluid viscosity) impacts the movement of the beads and their resulting diffusion.
 You will do this in multiple stages.
 \begin{itemize}
-\item Collect three videos according to Table \ref{tab:exp3video}.
+\item Make sure you understand how to safely operate the microscope, how to capture video with the microscope, and the pixel-to-distance ratio of the microscope camera.
+\item Capture tour first video and do a preliminary analysis
 \item Discuss as a class the method you plan to use to analyze your videos.
+\item Collect three videos according to Table \ref{tab:exp3video}.
 \item Analyze all of your videos according to the class plan to characterize the behavior of the random motion.
 \item Discuss as a class if you need to do any further analysis. Once complete, distribute the data to all groups.
 \item Analyze all the data to determine how the variation of parameters affects diffusion.
@@ -57,16 +59,16 @@ By telling it to expose the CCD to light for 100 ms intervals, for instance, you
 This also means that you have to carefully control the amount of light through your sample using the iris and bulb power control. 
 If you are having trouble getting the light settings correct, you can use the Auto Exposure option, but this will often result in very low frame rates.
 
-\begin{enumerate}
-\item To be sure that you know how to use the microscope, and to get a sense for scale, start by taking a look at the calibration slides. These will allow you to determine the pixel-scale of your image. Next, use the microspheres which have been dried to a glass slide to properly adust the focus and illumination of the microscope.
-\item Gather your first video (see the chart). Here are some helpful hints:
+\section*{Collecting Random Bead Motion Data}
+To be sure that you know how to use the microscope, and to get a sense for scale, start by taking a look at the calibration images, located in a file on the desktop. These will allow you to determine the pixel-scale of your image. Next, use the microspheres which have been dried to a glass slide to properly adust the focus and illumination of the microscope.
+\paragraph*{Gather your first video} (see the chart). Here are some helpful hints:
 \begin{itemize}
 \item As you prepare each slide, remember to shake the vial of solution before you extract a sample with the pipette. Your video should be collected fairly quickly after the sample is deposited on the slide. If it takes too much time (e.g., more than 10 minutes), you may want to make another preparation of the sample.
 \item Use the 40X objective for these bead videos.
 \item Each video should be approximately the same total time (about 5 seconds of video for each solution/sample).
-\item Be sure to note and RECORD the video resolution and frame rate for EACH video as soon as VirtualDub has captured the video. Most of this data cannot be retrieved once you leave VirtualDub/start a new video collection.
+\item Be sure to RECORD the video resolution and frame rate for EACH video as soon as VirtualDub has captured the video. Most of this data cannot be retrieved once you leave VirtualDub/start a new video collection.
 \end{itemize}
-\item Harvest the data out of the video file. 
+\paragraph*{Harvest the data out of the video file.}
 Since all three videos have captured random motion, we need only look at one video to begin characterizing the behavior of random motion. 
 (Also, you may learn tricks and ideas that can help you analyze the other videos in the coming weeks. Next week, we will teach you automatic tracking!) 
 The method you use to harvest the data is a bit different from what you have done previously with ImageJ. 
@@ -74,14 +76,13 @@ Rather than tracking each object of interest through EVERY frame of the video, w
 So, for the beads that you are tracking, you want an initial position (at t=0, the first frame), a final position (at the last frame), and at least 4 other positions (at specific frames equally spaced between the initial and final frame). 
 This will take some careful planning once you have the video in ImageJ and BEFORE you open the Manual Tracking plugin. 
 To compare these beads with each other (histogram-style), you need to be tracking these beads in the all of the SAME frames. 
-For the first video ONLY, we suggest 40 -50 beads should be tracked (so that you can create good histograms). 
+For the first video ONLY, we suggest 40-50 beads should be tracked (so that you can create good histograms). 
 For videos 2 and 3, you can use only 15-20 beads (which should be sufficient for the RMS analysis).
-\item Characterize the random motion of the beads in your first video. Compare and contrast their motion to what you would expect for directed motion.
+\paragraph*{Characterize the random motion of the beads in your first video.} Compare and contrast their motion to what you would expect for directed motion.
 \begin{enumerate}
 \item Are the average total $x-$ and $y-$ displacements of the silica beads, $\left \langle \Delta x \right \rangle$ and $\left \langle \Delta y \right \rangle$, larger if you measure total displacements for larger time intervals? If the averages change, how do they change? If they don't change, why don't they change?
 \item Are the individual total $x-$ and $y-$ displacements of the silica beads, $\Delta x$ and $\Delta y$, larger if you measure total displacements for larger time intervals? [\textit{Hint: Make some histograms!}] If the individual displacements change, how do they change? If they don't change, why don't they change? How are these individual displacements linked to the average displacements?
 \item How does the root mean square (RMS) total displacement, $r=\sqrt{\Delta x^2+\Delta y^2}$ , change as a function of the measurement time interval?
-\end{enumerate}
 \end{enumerate}
 
 \begin{table}[ht]
@@ -92,11 +93,13 @@ For videos 2 and 3, you can use only 15-20 beads (which should be sufficient for
 \hline
  \textbf{Group \# (Parameter)} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3}  \\
  (each parameter will be investigated by two distinct groups, allowing you to `double check' the results) & (condition for testing r$^2$ vs.\ t dependence) &  & \\ \hline
- \textbf{1 \& 4 (bead size)} & 2 $\mu$m silica beads in water & 5 $\mu$m silica beads in water & 1 $\mu$m silica beads in water \\ \hline
- \textbf{2 \& 5 (fluid viscosity)} & 2 $\mu$m silica beads in water & 2 $\mu$m silica beads in low viscosity glycerol/water mix & 2 $\mu$m silica beads in high viscosity glycerol/water mix \\ \hline
- \textbf{3 \& 6 (bead mass \& viscosity)} & 2 $\mu$m PS beads in water & 2 $\mu$m PS beads in low viscosity glycerol/water mix & 2 $\mu$m PS beads in high viscosity glycerol/water mix \\ \hline
+ \textbf{1 \& 2 (bead size)} & 2 $\mu$m silica beads in water & 5 $\mu$m silica beads in water & 1 $\mu$m silica beads in water \\ \hline
+ \textbf{3 \& 4 (fluid viscosity)} & 2 $\mu$m silica beads in water & 2 $\mu$m silica beads in low viscosity glycerol/water mix & 2 $\mu$m silica beads in high viscosity glycerol/water mix \\ \hline
+ \textbf{5, 6, \& 7 (bead mass \& viscosity)} & 2 $\mu$m PS beads in water & 2 $\mu$m PS beads in low viscosity glycerol/water mix & 2 $\mu$m PS beads in high viscosity glycerol/water mix \\ \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 %Day 2
 \section{Describing Diffusion and Random Motion using Automatic Tracking.}
