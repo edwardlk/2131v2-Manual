@@ -24,24 +24,28 @@ Since the motion looks different for each bead, if we want to make statements ab
 It will be useful for you to measure averages over all beads, but also to create histograms to see the variability from bead to bead (just like you might be curious to know both the average grade and histogram of grades in an exam).
 When working with histograms, it will be necessary to track EVEN MORE beads (say 40-50), so that there are sufficient representatives in each `bin' of the histogram.
 
-\paragraph{For this three week lab:} Your overall task for the next three weeks is to characterize the random motion of beads suspended in fluid and determine how the variation of experimental parameters (such as bead mass and size and the fluid viscosity) impacts the movement of the beads and their resulting diffusion.
+\paragraph{For this three week lab:} Your overall task for the next three weeks is to characterize the random motion of beads suspended in fluid and determine how the variation of experimental parameters (such as bead mass and size, and the fluid viscosity) impacts the movement of the beads and their resulting diffusion.
 You will do this in multiple stages:
-\begin{itemize}
+\begin{enumerate}
 \item Make sure you understand how to safely operate the microscope, how to capture video with the microscope, and the pixel-to-distance ratio of the microscope camera.
-\item Capture your first video and do a preliminary analysis
+\item Capture your first videos and do a preliminary analysis
 \item Discuss as a class the method you plan to use to analyze your videos.
 \item Collect three videos according to Table \ref{tab:exp3video}.
 \item Analyze all of your videos according to the class plan to characterize the behavior of the random motion.
 \item Discuss as a class if you need to do any further analysis. Once complete, distribute the data to all groups.
 \item Analyze all the data to determine how the variation of parameters affects diffusion.
-\end{itemize}
+\end{enumerate}
 
 \section{Exploratory Analysis of Random Motion}
 Begin by making sure that you know how to use the microscope.
+Make sure the stage is level by using the shims available in the lab.
 To get a sense for scale, start by taking a look at the calibration images, located in a file on the desktop.
 These will allow you to determine the pixel-scale of your image.
 Next, use the microspheres which have been dried to a glass slide to properly adjust the focus and illumination of the microscope.
-\paragraph*{Gather your first videos} (see the chart). Here are some helpful hints:
+\paragraph*{Gather your first videos} 
+Table \ref{tab:exp3video} has a summary of the the parameters that are being investigated by each group.
+Check with your TA if you are unsure of your group number.
+Here are some helpful hints:
 \begin{itemize}
 \item As you prepare each slide, remember to shake the vial of solution before you extract a sample with the pipette. Your video should be collected fairly quickly after the sample is deposited on the slide. If it takes too much time (e.g., more than 10 minutes), you may want to make another preparation of the sample.
 \item Use the 40X objective for these bead videos.
@@ -56,19 +60,18 @@ Next, use the microspheres which have been dried to a glass slide to properly ad
 \emph{Note: Do not set the scale of your video, Multitracker will not work if you do that.}
 \begin{itemize}
 \item Open your video file in ImageJ. In the `AVI Reader' window that opened before the video loads, check `Convert to Grayscale'.
-\item We need to threshold the video so that the microspheres are black on a white background. Navigate to `Image $>$ Adjust $>$ Threshold' and adjust the sliders until only the microspheres are black.
-\item Depending on the shading and focusing of your initial video, sometimes only the centers of the microspheres will be black. This will still work, as we only need to track the motion of the center of the microspheres (and you are able to calculate the pixel-scaling from the calibration images.
+\item We need to threshold the video so that the microspheres are black on a white background. Navigate to `Image $>$ Adjust $>$ Threshold' and adjust the sliders until only the microspheres are black. Depending on the shading and focusing of your initial video, sometimes only the centers of the microspheres will be black. This will still work, as we only need to track the motion of the center of the microspheres (and because you are able to calculate the pixel-scaling from the calibration images).
 \item After properly setting your threshold limits, click `Apply'. In the `Convert Stack to Binary' window that opens, uncheck `Calculate threshold for each image' and click OK. Close the Threshold window.
 \item Zoom in on one of the particles and use the *Oval* tool to measure its area. You'll use this number as a guide for setting the particle size lower limit of the automatic tracker.
-\item Open the `MultiTracker' plugin. Enter a `Minimum Object Size' slightly below the size of your particles to avoid tracking stray noise. Check the boxes next to `Show Lables',`Show Positions', and `Show Paths'. Click OK.
+\item Open the `MultiTracker' plugin. Enter a `Minimum Object Size' slightly below the size of your particles to avoid tracking stray noise. Check the boxes next to `Show Lables', `Show Positions', and `Show Paths'. Click OK.
 \item After running through its calculations, the plugin should have done the following things (see figure \ref{fig:multitracker} for an example):
 \begin{itemize}
 	\item All the particles in the video now have a label with a number assigned to them by the plugin and their position.
-	\item A window `Path' opens that shows the motions of the tracked particles throughout the video.
+	\item A window `Path' opens that shows the motions of the tracked particles throughout the video. (Though this may not necessarily be useful in your analysis, it does give you a way of quickly checking your data. For instance, in the example data in figure \ref{fig:multitracker}, what common feature of the paths point to a problem with the setup when that data was captured?)
 	\item A results window opens that displays the X and Y position of each particle in each frame.
 \end{itemize}
 \item Copy and past the results into excel.
-\item Watch the video and delete the data of any sphres that leave the image or seem to encounter some other type of problem.
+\item Watch the video and delete the data of any spheres that leave the image or seem to encounter some other type of problem.
 \end{itemize}
 \begin{figure}[ht]
 	\centering
@@ -79,7 +82,7 @@ Next, use the microspheres which have been dried to a glass slide to properly ad
 
 \paragraph*{Characterize the random motion of the beads in your videos.} Compare and contrast their motion to what you would expect for directed motion.
 \begin{enumerate}
-\item Do the average total $x-$ and $y-$ displacements of the beads, $\left \langle \Delta x \right \rangle$ and $\left \langle \Delta y \right \rangle$ change throughout the time intervals you observed? If so, how do they change; if not, why don't they change?
+\item Do the average total $x-$ and $y-$ displacements of the beads, $\left \langle \Delta x \right \rangle$ and $\left \langle \Delta y \right \rangle$, change throughout the time intervals you observed? If so, how do they change; if not, why don't they change?
 \item How do the individual total $x-$ and $y-$ displacements of the beads, $\Delta x$ and $\Delta y$, change throughout the time intervals you observed? [\textit{Hint: Make some histograms!}] If so, how do they change; if not, why don't they change? How are these individual displacements linked to the average displacements?
 \item How does the total displacement of a particle, $r=\sqrt{\Delta x^2+\Delta y^2}$ , change as a function of the measurement time interval?
 \end{enumerate}
@@ -104,7 +107,9 @@ Therefore, make sure that your data files are easy to follow, and that your grap
 
 %Day 2
 \section{Measuring \& Analyzing Random Motion}
-At the end of the first day of this experiment, your TA provided you with some information about the Diffusion Constant during the discussions at the end of class. Begin your second day of this experiment by completing your analysis of video 1 using the plan that your decided upon as a class at the end of the first day. Then Capture and analyze videos 2 and 3.
+At the end of the first day of this experiment, your TA provided you with some information about the Diffusion Constant during the discussions at the end of class. 
+Begin your second day of this experiment by completing your analysis of video 1 using the plan that your decided upon as a class at the end of the first day.
+Then capture and analyze videos 2 and 3.
 \begin{enumerate}
 \item \textbf{Examining Diffusion for Video 1:} How does the diffusion constant, D, depend on the measurement time interval? Using the information you have already created for your first video, investigate how the square of the average bead displacement, $r^{2}$, changes for different measurement time intervals, $\Delta t$. What is the diffusion constant for your video 1?
 \item \textbf{Collecting Data for Videos 2 and 3:} These videos have been carefully chosen so that the class, as a whole, can make statements about how varying specific parameters affects the diffusion constant. The parameters of the videos that you capture (i.e., the frame rate, resolution, length, etc.) should be based on what you decided to do as a class at the end of the first day. 
@@ -118,7 +123,7 @@ At the end of the first day of this experiment, your TA provided you with some i
 \section{Characterizing Random Motion and the Diffusion Constant}
 Over the last two weeks, you fully characterized the random motion of beads in fluid and began to determine how changing one parameters of the solution (beads in fluid) can affect the diffusion constant, D.
 In this final week of the lab, you will combine your results with those from the rest of the class, and determine how other parameters of the bead solutions will affect the diffusion constant.
-The data collected by all groups should be included in your lab report.
+\emph{The data collected by all groups should be included in your lab report.}
 
 \begin{enumerate}
 \item \textbf{Examine Diffusion:} Using the data that all of the lab groups have collected over the course of this lab, you are expected to make an argument for a plausible expression for the diffusion constant, D, as a function of some (or all) of the following parameters: fluid viscosity, bead size, and bead mass. (An argument should contain a Claim, Data, and a Warrant—i.e., an explanation of how the claim is related to the data.) You should confirm that this mathematical model for D is plausible by performing a dimensional analysis.
@@ -129,7 +134,7 @@ The data collected by all groups should be included in your lab report.
 \item What is the mathematical model that you have constructed for the diffusion constant, D? How is this justified by your experimental data? Do the dimensions work out?
 \item How could we design an experiment to find the exact form for the diffusion constant (i.e., how could we figure out the numerical constants that accompany the scaling of D with bead mass, bead radius, viscosity, and temperature)?
 \item What could you have done better in your own design and analysis?
-\item How are these ideas of random motion and diffusion constants related to (important in) Biology?
+\item How are these ideas of random motion and diffusion constants related to (important in) other scientific disciplines?
 \end{itemize}
 \end{enumerate}
 
