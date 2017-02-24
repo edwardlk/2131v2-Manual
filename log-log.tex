@@ -66,7 +66,7 @@ One way to see how to do this is to use a \emph{log-log plot}.
 That is, instead of just plotting the variables themselves, we plot the logarithm of the variables.
 Let's see how this works.
 Suppose we have a power law function $y = x^{N}$.
-If we plot this, we get a curve like shown in figure \textbf{X}.
+If we plot this, we get a curve like shown in figure \ref{fig:lin-log}.
 The more powers we have, the faster it rises (and the odd powers are negative for negative values of x.)
 But if we take the logarithm of both sides of that equation, $y = x^{N}$,we get
 \[ log(y)=N \cdot log(x) \] 
@@ -78,9 +78,15 @@ So if we have some complicated function that can be approximated by a power law,
 If we get a straight line a power law works. 
 (We have only plotted positive values of x and y in the log-log plot since the log of a negative number is not a real number.)
 Note that this works for negative powers too. 
-Here's what the linear and log-log plots look like for these.
 
-\section{Log-log Plots in Science}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{linVSlog.png}
+	\caption{Comparison of linear vs. log-log graphs.}
+	\label{fig:lin-log}
+\end{figure}
+
+\section{Log-Log Plots in Science}
 Log-Log plots have many uses in science.
 They are especially helpful for differentiating between different forms of \emph{functional dependency}.
 What is functional dependency? 
@@ -105,6 +111,14 @@ The dominant functional dependency (the one that determines the type of motion w
 \par
 This is all very interesting, but how is it helpful to us?
 In biology, almost all motion can look quite random, but that apparently random motion can hide other processes that may look similar to random motion — in particular, caged motion:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{log_diff.png}
+	\caption{Example investigation of live motion analysis using log-log plots.}
+	\label{fig:log-diff}
+\end{figure}
+
 \begin{itemize}
 \item In ecology, tracking data from tagged animals can be analyzed to find the roaming grounds of an animal.
 However, to distinguish random motion from the confined area to which an animal intentionally returns, we cannot simply look at the tracks by eye.
