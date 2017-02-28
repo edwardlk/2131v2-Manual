@@ -1,6 +1,7 @@
 \chapter{Log-Log Plots}
 \thispagestyle{fancy}
 \fancyhead[RE,LO]{Technical Document \thechapter}
+\label{chap:log-plots}
 
 In understanding how one variable depends on another, we introduced the idea of \emph{functional dependence}.
 This helps us understand not just that one variable depends on another, but how it depends on the other.
@@ -59,14 +60,14 @@ Instead of just plotting the variables themselves, we plot the logarithm of the 
 Let's see how this works.
 \par
 Suppose we have a power law function $y = ax^{N}$.
-If we plot this, we get a curve like the left side of figure \ref{fig:lin-log}.
-The more powers we have, the faster it rises (and the odd powers are negative for negative values of x.)
+If we plot this, we get curves like those in the left side of figure \ref{fig:lin-log}.
+The higher the power we have, the faster it rises (and the odd powers are negative for negative values of x.)
 But if we take the logarithm of both sides of that equation, $y = ax^{N}$,we get
 \[ log(y)=N \cdot log(x) + log(a) \] 
 If we now take as new variables $Y = log(y)$, $X = log(x)$, and $b = log(a)$ then our new equation is just
 \[ Y = N \cdot X + b \]
 This is the graph of a straight line and the slope is proportional to the power.
-If we plot this we get the graph at the right of figure \ref{fig:lin-log}.
+If we plot this we get the graph at the right in figure \ref{fig:lin-log}.
 
 \begin{figure}[ht]
 	\centering
