@@ -30,7 +30,7 @@ You will do this in multiple stages:
 \item Make sure you understand how to safely operate the microscope, how to capture video with the microscope, and the pixel-to-distance ratio of the microscope camera.
 \item Capture your first videos and do a preliminary analysis
 \item Discuss as a class the method you plan to use to analyze your videos.
-\item Collect three videos according to Table \ref{tab:exp3video}.
+\item Collect three videos according to table~\ref{tab:exp3video}.
 \item Analyze all of your videos according to the class plan to characterize the behavior of the random motion.
 \item Discuss as a class if you need to do any further analysis. Once complete, distribute the data to all groups.
 \item Analyze all the data to determine how the variation of parameters affects diffusion.
@@ -43,7 +43,7 @@ To get a sense for scale, start by taking a look at the calibration images, loca
 These will allow you to determine the pixel-scale of your image.
 Next, use the microspheres which have been dried to a glass slide to properly adjust the focus and illumination of the microscope.
 \paragraph*{Gather your first videos} 
-Table \ref{tab:exp3video} has a summary of the the parameters that are being investigated by each group.
+Table~\ref{tab:exp3video} has a summary of the the parameters that are being investigated by each group.
 Check with your TA if you are unsure of your group number.
 Here are some helpful hints:
 \begin{enumerate}
@@ -51,8 +51,8 @@ Here are some helpful hints:
 \item Use the 40X objective for these bead videos.
 \item Capture 2 videos to get a good overview of random motion before you complete your full analysis:
 \begin{itemize}
-	\item Capture around 5 seconds of video at 30 fps.
-	\item Capture a `low fps' video (see the Technical Document \ref{chap:scope-basic}) at 1 fps for 30 seconds. 
+	\item Capture 5 seconds of video at 30 fps.
+	\item Capture a `low fps' video (see the Technical Document~\ref{chap:scope-basic}) at 1 fps for 30 seconds. 
 \end{itemize}
 \item Be sure to RECORD the video resolution and frame rate for EACH video as soon as you have captured the video. (Usually this is done in the file name itself, by naming your videos something like `2umSilica-H20-40x1280-30fps-001.avi' or `2umPS-lowGly-40x1280-1fps-001.avi')
 \end{enumerate}
@@ -64,10 +64,10 @@ Here are some helpful hints:
 \item After properly setting your threshold limits, click `Apply'. In the `Convert Stack to Binary' window that opens, uncheck `Calculate threshold for each image' and click OK. Close the Threshold window.
 \item Zoom in on one of the particles and use the *Oval* tool to measure its area. You'll use this number as a guide for setting the particle size lower limit of the automatic tracker.
 \item Open the `MultiTracker' plugin. Enter a `Minimum Object Size' below the size of your particles to avoid tracking stray noise (usually about half of the area that you measured in the previous step works well). Check the boxes next to `Show Lables', `Show Positions', and `Show Paths'. Click OK.
-\item After running through its calculations, the plugin should have done the following things (see figure \ref{fig:multitracker} for an example):
+\item After running through its calculations, the plugin should have done the following things (see figure~\ref{fig:multitracker} for an example):
 \begin{itemize}
 	\item All the particles in the video now have a label with a number assigned to them by the plugin and their position.
-	\item A window `Path' opens that shows the motions of the tracked particles throughout the video. (Though this may not necessarily be useful in your analysis, it does give you a way of quickly checking your data. For instance, in the example data in figure \ref{fig:multitracker}, what common feature of the paths point to a problem with the setup when that data was captured?)
+	\item A window `Path' opens that shows the motions of the tracked particles throughout the video. (Though this may not necessarily be useful in your analysis, it does give you a way of quickly checking your data. For instance, in the example data in figure~\ref{fig:multitracker}, what common feature of the paths point to a problem with the setup when that data was captured?)
 	\item A results window opens that displays the X and Y position of each particle in each frame.
 \end{itemize}
 \item Copy and past the results into excel.
@@ -99,22 +99,6 @@ Here are some helpful hints:
 \end{tabular}
 \caption{Video Summary}
 \label{tab:exp3video}
-\end{table}
-
-\begin{table}[]
-\centering
-\begin{tabular}{|c|p{1.5cm}|p{2.1cm}|c|c|c|}
-\hline
-\textbf{Group} & \textbf{Frame Rate} & \textbf{Parameter} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3} \\ \hline
-1 & 30 fps & \multirow{2}{2.1cm}{Bead Size} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{5 $\mu m$ silica in water} & \multirow{2}{3cm}{1 $\mu m$ silica in water} \\ \cline{1-2}
-2 & 1 fps &  &  &  &  \\ \hline
-3 & 30 fps  & \multirow{2}{2.1cm}{Fluid Viscosity} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{2 $\mu m$ silica in low viscosity glycerin/water} & \multirow{2}{3cm}{2 $\mu m$ silica in high viscosity glycerin/water} \\ \cline{1-2}
-4 & 1 fps & & & & \\ \hline
-5 & 30 fps & \multirow{2}{2.1cm}{Bead Mass \& Viscosity} & \multirow{2}{2.2cm}{2 $\mu m$ P.S. in water} & \multirow{2}{2.8cm}{2 $\mu m$ P.S. in low viscosity glycerin/water} & \multirow{2}{3cm}{2 $\mu m$ P.S. in high viscosity glycerin/water} \\ \cline{1-2}
-6 & 1 fps & & & & \\ \hline
-\end{tabular}
-\caption{My caption}
-\label{tab:exp3video_v2}
 \end{table}
 
 \paragraph*{Plan your analysis.} Use the `Leading a discussion' time to determine, as a class, the best way to analyze your data that allows you to characterizing diffusion.
@@ -153,6 +137,22 @@ In this final week of the lab, you will combine your results with those from the
 \item How are these ideas of random motion and diffusion constants related to (important in) other scientific disciplines?
 \end{itemize}
 \end{enumerate}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|p{1.5cm}|p{2.4cm}|c|c|c|}
+\hline
+\textbf{Group} & \textbf{Frame Rate} & \textbf{Parameter} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3} \\ \hline
+\textbf{1} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Size}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{5 $\mu m$ silica in water} & \multirow{2}{3cm}{1 $\mu m$ silica in water} \\ \cline{1-2}
+\textbf{2} & 1 fps &  &  &  &  \\ \hline
+\textbf{3} & 30 fps  & \multirow{2}{2.4cm}{\textbf{Fluid Viscosity}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{2 $\mu m$ silica in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ silica in high viscosity} \\ \cline{1-2}
+\textbf{4} & 1 fps & & & & \\ \hline
+\textbf{5} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Mass \& Viscosity}} & \multirow{2}{2.2cm}{2 $\mu m$ P.S. in water} & \multirow{2}{2.8cm}{2 $\mu m$ P.S. in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ P.S. in high viscosity} \\ \cline{1-2}
+\textbf{6} & 1 fps & & & & \\ \hline
+\end{tabular}
+\caption{[Possible video summary for next semester.] Video Summary. `Low viscosity' refers to a 15\% glycerin/water solution, and `high viscosity' refers to a 30\% glycerin/water solution.}
+\label{tab:exp3video_v2}
+\end{table}
 
 %\subsection*{Equipment}
 %Familiarize yourself with the Microscope Basics Technical Document before beginning any experimentation. 
