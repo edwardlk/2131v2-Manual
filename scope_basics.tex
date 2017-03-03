@@ -69,11 +69,11 @@ Then adjust the following settings:
 \item In `Color Adjustment', reduce Saturation to 0 and Contrast to 100. Adjust the brightness as necessary.
 \end{itemize}
 \paragraph*{To capture a video:}
-See figure \ref{fig:am-cap} while following along with the steps below:
+See figure~\ref{fig:am-cap} while following along with the steps below:
 \begin{itemize}
 \item Click the `Record' button on the left, this will open a window called `Video file'.
 \item Type the name of the video file that you want to capture; select your group's data folder as the save location. Click Next
-\item select the `avi' format, click Next.
+\item Select the `avi' format, click Next.
 \item Under `Encoder' setect `None Compressor', leave the encode parameter quality set at 100. Click Next.
 \item Check the box next to `Time Limit', then input the number of seconds that you want to capture video. Clicking `Finish' (or pressing Enter) will begin the video capture.
 \end{itemize}
@@ -83,26 +83,41 @@ While the camera is capturing, do your best to not disturb the table.
 
 \paragraph*{To capture a `low fps' video:}
 Occasionally we may need to capture video at a low frame rate over a long period of time.
-To do this, we will set the software to capture an image every few seconds (see figure \ref{fig:low-fps}).
+To do this, we will set the software to capture an image every few seconds (see figure~\ref{fig:low-fps}).
 Then, we will use ImageJ to stitch the images together into a .avi video.
-\begin{itemize}
+\begin{enumerate}
 \item Navigate to `Capture $>$ Start Time-lapse (Auto Capture)...'
-\item In the window that opens, begin by setting the directory where you want all the images to be saved. It's advised that you create a new folder where you will save all the images, as this will make the rest of the steps easier.
-\item Under File, set `Name Format' to `nnnn (sequence)', in `File Prefix' input the names that you want given to the videos, set `File Type' to png.
-\item Under Capture Mode, select `Time Slot' and input the number of seconds between each frame.
-\item Check `Total Images', then input the number of frames that you want captured.
+\item In the window that opens, adjust the following settings:
+	\begin{itemize}
+	\item Directory
+		\begin{itemize}
+		\item Base: Choose an empty folder within your group's data folder.
+		\item Sub: Leave as none.
+		\end{itemize}
+	\item File
+		\begin{itemize}
+		\item Name Format: Set to `nnnn (sequence)'.
+		\item File Prefix: Input the names that you want given to the images.
+		\item File Type: Set to png.
+		\end{itemize}
+	\item Capture Mode
+		\begin{itemize}
+		\item Select `Time Slot' and input the number of seconds between each frame.
+		\end{itemize}
+	\item Check `Total Images', then input the number of frames that you want captured.
+	\end{itemize}
 \item Clicking OK or pressing Enter will begin the time-lapse. As before, wait for the vibrations to die down before beginning the capture, and avoid touching the table.
 \item After the time-lapse is complete, open ImageJ and navigate to `File $>$ Import $>$ Image Sequence...'.
 \item Navigate to the folder where your time-lapse images are saved, choose any of the images and click Open.
 \item In the Sequence Options window, make sure `Sort names numerically' is checked, then click OK.
 \item After processing the images, a new window will open. Navigate to `File $>$ Save As $>$ AVI...'. Set Compression to `Uncompressed', set Frame Rate to 25, click OK. Enter the file name, then press Save.
 \item After creating the avi file, delete the time-lapse images to avoid using unnecessary space.
-\end{itemize}
+\end{enumerate}
 
-\begin{figure}[ht]
+\begin{figure}[hb!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{amscope06}
-	\caption{Amscope `low fps' video capturing settings.}
+	\includegraphics[width=0.55\textwidth]{amscope06}
+	\caption{Example Amscope `low fps' video capturing settings.}
 	\label{fig:low-fps}
 \end{figure}
 
