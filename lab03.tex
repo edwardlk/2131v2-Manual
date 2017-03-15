@@ -30,7 +30,7 @@ You will do this in multiple stages:
 \item Make sure you understand how to safely operate the microscope, how to capture video with the microscope, and the pixel-to-distance ratio of the microscope camera.
 \item Capture your first videos and do a preliminary analysis
 \item Discuss as a class the method you plan to use to analyze your videos.
-\item Collect three videos according to table~\ref{tab:exp3video}.
+\item Collect three videos according to table~\ref{tab:exp3video_v2}.
 \item Analyze all of your videos according to the class plan to characterize the behavior of the random motion.
 \item Discuss as a class if you need to do any further analysis. Once complete, distribute the data to all groups.
 \item Analyze all the data to determine how the variation of parameters affects diffusion.
@@ -43,7 +43,7 @@ To get a sense for scale, start by taking a look at the calibration images, loca
 These will allow you to determine the pixel-scale of your image.
 Next, use the microspheres which have been dried to a glass slide to properly adjust the focus and illumination of the microscope.
 \paragraph*{Gather your first videos} 
-Table~\ref{tab:exp3video} has a summary of the the parameters that are being investigated by each group.
+Table~\ref{tab:exp3video_v2} has a summary of the the parameters that are being investigated by each group.
 Check with your TA if you are unsure of your group number.
 Here are some helpful hints:
 \begin{enumerate}
@@ -86,19 +86,35 @@ Here are some helpful hints:
 %\item How do the individual total $x-$ and $y-$ displacements of the beads, $\Delta x$ and $\Delta y$, change throughout the time intervals you observed? [\textit{Hint: Make some histograms!}] If so, how do they change; if not, why don't they change? How are these individual displacements linked to the average displacements?
 \item How does the total displacement of a particle, $r=\sqrt{\Delta x^2+\Delta y^2}$ , change as a function of the measurement time interval?
 \end{itemize}
-
+%
+%\begin{table}[ht]
+%\centering
+%\begin{tabular}{|p{4.5cm}|p{3cm}|p{3cm}|p{3cm}|}
+%\hline
+% \textbf{Group \# (Parameter)} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3}  \\
+% (each parameter will be investigated by two distinct groups, allowing you to `double check' the results) & (condition for testing r$^2$ vs.\ t dependence) &  & \\ \hline
+% \textbf{1 \& 2 (bead size)} & 2 $\mu$m silica beads in water & 5 $\mu$m silica beads in water & 1 $\mu$m silica beads in water \\ \hline
+% \textbf{3 \& 4 (fluid viscosity)} & 2 $\mu$m silica beads in water & 2 $\mu$m silica beads in low viscosity glycerin/water mix & 2 $\mu$m silica beads in high viscosity glycerin/water mix \\ \hline
+% \textbf{5, 6, \& 7 (bead mass \& viscosity)} & 2 $\mu$m PS beads in water & 2 $\mu$m PS beads in low viscosity glycerin/water mix & 2 $\mu$m PS beads in high viscosity glycerin/water mix \\ \hline
+%\end{tabular}
+%\caption{Video Summary}
+%\label{tab:exp3video}
+%\end{table}
+%
 \begin{table}[ht]
 \centering
-\begin{tabular}{|p{4.5cm}|p{3cm}|p{3cm}|p{3cm}|}
+\begin{tabular}{|c|p{1.5cm}|p{2.4cm}|c|c|c|}
 \hline
- \textbf{Group \# (Parameter)} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3}  \\
- (each parameter will be investigated by two distinct groups, allowing you to `double check' the results) & (condition for testing r$^2$ vs.\ t dependence) &  & \\ \hline
- \textbf{1 \& 2 (bead size)} & 2 $\mu$m silica beads in water & 5 $\mu$m silica beads in water & 1 $\mu$m silica beads in water \\ \hline
- \textbf{3 \& 4 (fluid viscosity)} & 2 $\mu$m silica beads in water & 2 $\mu$m silica beads in low viscosity glycerin/water mix & 2 $\mu$m silica beads in high viscosity glycerin/water mix \\ \hline
- \textbf{5, 6, \& 7 (bead mass \& viscosity)} & 2 $\mu$m PS beads in water & 2 $\mu$m PS beads in low viscosity glycerin/water mix & 2 $\mu$m PS beads in high viscosity glycerin/water mix \\ \hline
+\textbf{Group} & \textbf{Frame Rate} & \textbf{Parameter} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3} \\ \hline
+\textbf{1} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Size}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{5 $\mu m$ silica in water} & \multirow{2}{3cm}{1 $\mu m$ silica in water} \\ \cline{1-2}
+\textbf{2} & 1 fps &  &  &  &  \\ \hline
+\textbf{3} & 30 fps  & \multirow{2}{2.4cm}{\textbf{Fluid Viscosity}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{2 $\mu m$ silica in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ silica in high viscosity} \\ \cline{1-2}
+\textbf{4} & 1 fps & & & & \\ \hline
+\textbf{5} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Mass \& Viscosity}} & \multirow{2}{2.2cm}{2 $\mu m$ P.S. in water} & \multirow{2}{2.8cm}{2 $\mu m$ P.S. in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ P.S. in high viscosity} \\ \cline{1-2}
+\textbf{6} & 1 fps & & & & \\ \hline
 \end{tabular}
-\caption{Video Summary}
-\label{tab:exp3video}
+\caption{Video Summary. `Low viscosity' refers to a 15\% glycerin/water solution, and `high viscosity' refers to a 30\% glycerin/water solution.}
+\label{tab:exp3video_v2}
 \end{table}
 
 \paragraph*{Plan your analysis.} Use the `Leading a discussion' time to determine, as a class, the best way to analyze your data that allows you to characterizing diffusion.
@@ -138,22 +154,22 @@ In this final week of the lab, you will combine your results with those from the
 \end{itemize}
 \end{enumerate}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{|c|p{1.5cm}|p{2.4cm}|c|c|c|}
-\hline
-\textbf{Group} & \textbf{Frame Rate} & \textbf{Parameter} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3} \\ \hline
-\textbf{1} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Size}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{5 $\mu m$ silica in water} & \multirow{2}{3cm}{1 $\mu m$ silica in water} \\ \cline{1-2}
-\textbf{2} & 1 fps &  &  &  &  \\ \hline
-\textbf{3} & 30 fps  & \multirow{2}{2.4cm}{\textbf{Fluid Viscosity}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{2 $\mu m$ silica in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ silica in high viscosity} \\ \cline{1-2}
-\textbf{4} & 1 fps & & & & \\ \hline
-\textbf{5} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Mass \& Viscosity}} & \multirow{2}{2.2cm}{2 $\mu m$ P.S. in water} & \multirow{2}{2.8cm}{2 $\mu m$ P.S. in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ P.S. in high viscosity} \\ \cline{1-2}
-\textbf{6} & 1 fps & & & & \\ \hline
-\end{tabular}
-\caption{[Possible video summary for next semester.] Video Summary. `Low viscosity' refers to a 15\% glycerin/water solution, and `high viscosity' refers to a 30\% glycerin/water solution.}
-\label{tab:exp3video_v2}
-\end{table}
-
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|p{1.5cm}|p{2.4cm}|c|c|c|}
+%\hline
+%\textbf{Group} & \textbf{Frame Rate} & \textbf{Parameter} & \textbf{Video 1} & \textbf{Video 2} & \textbf{Video 3} \\ \hline
+%\textbf{1} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Size}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{5 $\mu m$ silica in water} & \multirow{2}{3cm}{1 $\mu m$ silica in water} \\ \cline{1-2}
+%\textbf{2} & 1 fps &  &  &  &  \\ \hline
+%\textbf{3} & 30 fps  & \multirow{2}{2.4cm}{\textbf{Fluid Viscosity}} & \multirow{2}{2.3cm}{2 $\mu m$ silica in water} & \multirow{2}{3cm}{2 $\mu m$ silica in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ silica in high viscosity} \\ \cline{1-2}
+%\textbf{4} & 1 fps & & & & \\ \hline
+%\textbf{5} & 30 fps & \multirow{2}{2.4cm}{\textbf{Bead Mass \& Viscosity}} & \multirow{2}{2.2cm}{2 $\mu m$ P.S. in water} & \multirow{2}{2.8cm}{2 $\mu m$ P.S. in low viscosity} & \multirow{2}{3cm}{2 $\mu m$ P.S. in high viscosity} \\ \cline{1-2}
+%\textbf{6} & 1 fps & & & & \\ \hline
+%\end{tabular}
+%\caption{[Possible video summary for next semester.] Video Summary. `Low viscosity' refers to a 15\% glycerin/water solution, and `high viscosity' refers to a 30\% glycerin/water solution.}
+%\label{tab:exp3video_v2}
+%\end{table}
+%
 %\subsection*{Equipment}
 %Familiarize yourself with the Microscope Basics Technical Document before beginning any experimentation. 
 %If you do not know how a particular part of the microscope works, please ask your TA — the equipment is expensive! 
